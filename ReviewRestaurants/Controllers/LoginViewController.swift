@@ -13,14 +13,22 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var proceedButton: UIButton!
     
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
     
     
     // MARK: Actions
     
-    
-    @IBAction func proceed(_ sender: Any) {
-        self.performSegue(withIdentifier: kGoToSecondScreenSegue, sender: self)
+    @IBAction func login(_ sender: Any) {
+        for user in users {
+            if emailTextField.text == user.email && passwordTextField.text == user.password {
+                self.performSegue(withIdentifier: kGoToSecondScreenSegue, sender: self)
+                return
+            }
+        }
     }
     
     
@@ -31,11 +39,19 @@ class LoginViewController: UIViewController {
             
             controller.mainLabelText = "We passed some info, hehe"
         }
+        else if let controller = segue.destination as? CreateAccountViewController {
+            controller.registrationDelegate = self
+        }
     }
     
     // MARK: Constants
     
     let kGoToSecondScreenSegue: String = "goToSecondController"
+    
+    
+    // MARK: Variables
+    
+    var users: [User] = []
     
     
     // MARK: Controller Methods
@@ -51,6 +67,12 @@ class LoginViewController: UIViewController {
 extension LoginViewController: DashboardViewControllerDelegate {
     
     func returnString(_ string: String) {
-        self.usernameTextField.text = string
+        self.emailTextField.text = string
+    }
+}
+
+extension LoginViewController: RegistrationDelegate {
+    func didSaveNewUser(_ user: User) {
+        users.append(user)
     }
 }
