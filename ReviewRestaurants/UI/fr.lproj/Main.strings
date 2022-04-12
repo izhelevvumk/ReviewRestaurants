@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4r0-Nj-zun"; */
+"4r0-Nj-zun.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "AtU-dp-rIx"; */
+"AtU-dp-rIx.configuration.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AtU-dp-rIx"; */
+"AtU-dp-rIx.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BY2-I6-IiF"; */
+"BY2-I6-IiF.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Create Account"; ObjectID = "Da9-7Z-zOV"; */
+"Da9-7Z-zOV.title" = "Create Account";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "KR8-pW-RdQ"; */
+"KR8-pW-RdQ.configuration.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "KR8-pW-RdQ"; */
+"KR8-pW-RdQ.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "QzL-7E-A4W"; */
+"QzL-7E-A4W.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QzL-7E-A4W"; */
+"QzL-7E-A4W.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Password:"; ObjectID = "TK6-xD-QVm"; */
+"TK6-xD-QVm.text" = "Password:";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "cyL-0J-Oes"; */
+"cyL-0J-Oes.text" = "Email:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rjr-Xd-Wh1"; */
+"rjr-Xd-Wh1.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uqA-rd-VhO"; */
+"uqA-rd-VhO.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "v07-yu-Upz"; */
+"v07-yu-Upz.text" = "Label";

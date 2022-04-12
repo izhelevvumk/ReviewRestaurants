@@ -7,8 +7,9 @@
 
 import Foundation
 import UIKit
+import FMDB
 
-final class Restaurant: NSObject {
+class Restaurant: NSObject {
     
     var image: UIImage
     
@@ -21,4 +22,31 @@ final class Restaurant: NSObject {
         super.init()
     }
     
+    public init(set: FMResultSet) {
+        self.name = String(set.string(forColumn: "restaurant_name") ?? "")
+        self.image = UIImage()
+        super.init()
+    }
+}
+
+extension Restaurant {
+    static var selectRestaurants: String {
+        return """
+        SELECT * FROM restaurants
+        """
+    }
+    
+    static func getRestaurantsFromDbSet(_ set: FMResultSet?) -> [Restaurant] {
+        guard let set = set else {
+            return []
+        }
+        
+        var rests: [Restaurant] = []
+        
+        while (set.next()) {
+            rests.append(Restaurant(set: set))
+        }
+        
+        return rests
+    }
 }

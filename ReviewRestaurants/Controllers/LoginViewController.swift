@@ -23,12 +23,21 @@ class LoginViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func login(_ sender: Any) {
-        for user in users {
-            if emailTextField.text == user.email && passwordTextField.text == user.password {
-                self.performSegue(withIdentifier: kGoToSecondScreenSegue, sender: self)
-                return
-            }
-        }
+//        let restsArray: [Restaurant] = [Restaurant(name: "BlaBlaBla"), Restaurant(name: "BlaBlaBla")]
+//
+//        DatabaseManager.shared.insertRestaurants(restsArray)
+        
+        let rests = DatabaseManager.shared.restaurantsFromDb()
+        
+        return
+        
+        
+//        for user in users {
+//            if emailTextField.text == user.email && passwordTextField.text == user.password {
+//                self.performSegue(withIdentifier: kGoToSecondScreenSegue, sender: self)
+//                return
+//            }
+//        }
     }
     
     
@@ -59,8 +68,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.placeholder = NSLocalizedString("EMAIL", comment: "") 
+        
         proceedButton.setTitle("MY NEW BUTTON TITLE", for: .normal)
         // Do any additional setup after loading the view.
+        
     }
 }
 
